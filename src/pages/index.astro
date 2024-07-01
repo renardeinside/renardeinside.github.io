@@ -1,0 +1,76 @@
+---
+import { Github, NotebookText, Linkedin } from "lucide-svelte";
+import Photo from "../static/me.jpeg";
+import { Image } from "astro:assets";
+---
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+    html {
+        background: #132843; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+            to right,
+            #132843,
+            #295b76
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to right,
+            #132843,
+            #295b76
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        font-family: "Space Mono", monospace;
+        font-weight: 400;
+    }
+</style>
+
+<main class="m-4 mt-10">
+    <div class="flex justify-center">
+        <div class="p-10 rounded-lg drop-shadow-2xl">
+            <div class="flex flex-col justify-center items-center space-y-2">
+                <div class="avatar">
+                    <div class="w-48 rounded-xl">
+                        <Image
+                            src={Photo}
+                            alt="Ivan Trusov"
+                            loading={"lazy"}
+                            decoding={"async"}
+                        />
+                    </div>
+                </div>
+                <div class="font-bold text-2xl text-slate-50">Ivan Trusov</div>
+                <div class="font-semibold text-xl text-slate-50">Data and ML Architect</div>
+            </div>
+            <div class="space-y-4">
+                <article class="prose md:prose-lg lg:prose-xl max-w-md text-slate-100">
+                    <h4 class="text-slate-300">About</h4>
+                    <p>
+                        I am a Data Architect with strong background in Data
+                        Engineering, Machine Learning and Data Governance.
+                    </p>
+                    <p>
+                        In my spare time I also like to write essays on various
+                        technical topics.
+                    </p>
+                </article>
+                <div class="flex flex-row space-x-2">
+                    <a href="https://github.com/renardeinside">
+                        <button class="btn btn-accent btn-outline"
+                            ><Github /> GitHub</button
+                        >
+                    </a>
+                    <a href="https://www.linkedin.com/in/ivan-trusov/">
+                        <button class="btn btn-primary btn-outline">
+                            <Linkedin /> LinkedIn
+                        </button>
+                    </a>
+                    <a href="https://medium.com/@polarpersonal">
+                        <button class="btn btn-outline btn-warning"
+                            ><NotebookText />Articles</button
+                        >
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
