@@ -1,6 +1,8 @@
 ---
 import { Github, NotebookText, Linkedin } from "lucide-svelte";
 import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import Photo from "../static/me.jpeg";
 ---
 
 <Base>
@@ -8,12 +10,7 @@ import Base from "../layouts/Base.astro";
         <div class="flex flex-col justify-center items-center space-y-2">
             <div class="avatar">
                 <div class="max-w-80 rounded-xl">
-                    <img
-                        src="./me.jpeg"
-                        decoding="async"
-                        loading="lazy"
-                        alt="Ivan Trusov"
-                    />
+                    <Image src={Photo} alt="Ivan Trusov" />
                 </div>
             </div>
             <div class="font-bold text-2xl text-slate-50">Ivan Trusov</div>
