@@ -1,54 +1,61 @@
-import { Github, NotebookText, Linkedin } from "lucide-svelte";
+import { Github, NotebookText, Linkedin, Sparkles } from "lucide-svelte";
 import Base from "../layouts/Base.astro";
 import { Image } from "astro:assets";
 import Photo from "../static/me.jpeg";
 
 
 <Base>
-    <div class="p-10 space-y-6">
-        <div class="flex flex-col justify-center items-center space-y-2">
-            <div class="avatar">
-                <div class="max-w-80 rounded-xl">
-                    <Image src={Photo} alt="Ivan Trusov" />
+    <div class="flex justify-center">
+        <div class="p-10 space-y-6">
+            <div class="flex flex-col justify-center items-center space-y-2">
+                <div class="avatar">
+                    <div class="max-w-80 rounded-xl">
+                        <Image src={Photo} alt="Ivan Trusov" />
+                    </div>
+                </div>
+                <div class="font-bold text-2xl text-slate-50">Ivan Trusov</div>
+                <div class="font-semibold text-xl text-slate-50">
+                    Data and ML Architect
                 </div>
             </div>
-            <div class="font-bold text-2xl text-slate-50">Ivan Trusov</div>
-            <div class="font-semibold text-xl text-slate-50">
-                Data and ML Architect
-            </div>
-        </div>
-        <div class="space-y-4 w-full">
-            <article class="prose prose-4xl max-w-md text-slate-100">
-                <h4 class="text-slate-300">About</h4>
-                <p>
-                    I am a Data Architect with strong background in Data
-                    Engineering, Machine Learning and Data Governance.
-                </p>
-                <p>
-                    In my spare time I also like to write essays on various
-                    technical topics.
-                </p>
-            </article>
-            <div
-                class="flex flex-row space-x-2 w-full justify-center items-center"
-            >
-                <a href="https://github.com/renardeinside">
-                    <button class="btn btn-accent btn-outline">
-                        <Github />
-                        <span class="hidden md:block">GitHub</span>
-                    </button>
-                </a>
-                <a href="https://www.linkedin.com/in/ivan-trusov/">
-                    <button class="btn btn-primary btn-outline">
-                        <Linkedin />
-                        <span class="hidden md:block">LinkedIn</span>
-                    </button>
-                </a>
-                <a href="https://medium.com/@polarpersonal">
-                    <button class="btn btn-outline btn-warning">
-                        <NotebookText /><span class="hidden md:block">Articles</span>
-                    </button>
-                </a>
+            <div class="space-y-4 w-full">
+                <article class="prose prose-4xl max-w-md text-slate-100">
+                    <h4 class="text-slate-300">About</h4>
+                    <p>
+                        I am a Data Architect with strong background in Data
+                        Engineering, Machine Learning and Data Governance.
+                    </p>
+                    <p>
+                        In my spare time I also like to write essays on various
+                        technical topics.
+                    </p>
+                </article>
+                <div
+                    class="flex flex-row space-x-2 w-full justify-center items-center"
+                >
+                    <a href="https://github.com/renardeinside">
+                        <button class="btn btn-accent btn-outline">
+                            <Github />
+                            <span class="hidden md:block">GitHub</span>
+                        </button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ivan-trusov/">
+                        <button class="btn btn-primary btn-outline">
+                            <Linkedin />
+                            <span class="hidden md:block">LinkedIn</span>
+                        </button>
+                    </a>
+                    <a href="https://medium.com/@polarpersonal">
+                        <button class="btn btn-outline btn-warning">
+                            <NotebookText /><span class="hidden md:block">Articles</span>
+                        </button>
+                    </a>
+                    <a href="/essays">
+                        <button class="btn btn-outline text-teal-300 hover:text-black hover:bg-teal-300 hover:border-teal-300">
+                            <Sparkles /><span class="hidden md:block">Essays</span>
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
