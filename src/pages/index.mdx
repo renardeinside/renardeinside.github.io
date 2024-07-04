@@ -1,9 +1,8 @@
----
 import { Github, NotebookText, Linkedin } from "lucide-svelte";
 import Base from "../layouts/Base.astro";
 import { Image } from "astro:assets";
 import Photo from "../static/me.jpeg";
----
+
 
 <Base>
     <div class="p-10 space-y-6">
@@ -46,11 +45,9 @@ import Photo from "../static/me.jpeg";
                     </button>
                 </a>
                 <a href="https://medium.com/@polarpersonal">
-                    <button class="btn btn-outline btn-warning"
-                        ><NotebookText /><span class="hidden md:block"
-                            >Articles</span
-                        ></button
-                    >
+                    <button class="btn btn-outline btn-warning">
+                        <NotebookText /><span class="hidden md:block">Articles</span>
+                    </button>
                 </a>
             </div>
         </div>
