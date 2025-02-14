@@ -29,6 +29,8 @@ jobs:
 
       - name: Build
         run: yarn build
+        env:
+          VITE_FIRST_MEET_DATE: ${{ secrets.VITE_FIRST_MEET_DATE }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
