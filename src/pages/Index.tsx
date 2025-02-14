@@ -40,10 +40,10 @@ export default function ProfilePage() {
     <>
       <NavBar />
       <div className="w-full">
-        <div className="container mx-auto px-4 py-8 font-mono max-w-5xl">
+        <div className="container mx-auto px-10 py-8 font-mono max-w-5xl">
           <div className="mb-12 flex flex-col text-left">
             <div className="relative h-32 w-32 overflow-hidden mb-4">
-              <img src="/logo.svg" alt="John Doe" />
+              <img src="/logo.svg" alt="Ivan Trusov" />
             </div>
             <h1 className="text-3xl font-bold">Ivan Trusov</h1>
             <Separator className="my-4" />
@@ -58,16 +58,16 @@ export default function ProfilePage() {
               <Link
                 key={project.id}
                 to={project.link}
-                className="group relative aspect-[4/3] overflow-hidden bg-muted min-h-48 min-w-48"
+                className="group relative aspect-[4/3] overflow-hidden bg-muted min-h-48 min-w-48 flex justify-center items-center"
               >
                 <div className="absolute top-0 left-0 w-full p-4 text-white z-10 pointer-events-none sm:pointer-events-auto">
                   <h3 className="text-lg font-semibold">{project.title}</h3>
                   <Separator className="mb-2 bg-white w-3/4" />
                 </div>
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
-                  className="object-cover transition-transform duration-300 group-hover:scale-110 group-hover:blur-0 group-hover:brightness-100 blur-sm brightness-75"
+                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center sm:opacity-0 group-hover:sm:opacity-100 group-active:opacity-100">
                   <div className="p-4 text-white">
