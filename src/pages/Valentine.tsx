@@ -10,6 +10,13 @@ export default function Valentine() {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
   const [isCorrectDate, setIsCorrectDate] = useState<boolean | null>(null);
   const correctDate = import.meta.env.VITE_FIRST_MEET_DATE; // Must be in YYYY-MM-DD format
+  const incorrectDateMessages = [
+    "Oops! Try again. 😢",
+    "Not quite right. 😢",
+    "Close, but not quite. 😢",
+    "Oh no! Try again. 😢",
+    "Not the right date. 😢",
+  ];
 
   const moveNoButton = () => {
     const margin = 100;
@@ -95,7 +102,13 @@ export default function Valentine() {
             Confirm
           </Button>
           {isCorrectDate === false && (
-            <p className="text-red-500 mt-2">Oops! Try again. 😢</p>
+            <p className="text-red-500 mt-2">
+              {
+                incorrectDateMessages[
+                  Math.floor(Math.random() * incorrectDateMessages.length)
+                ]
+              }
+            </p>
           )}
         </div>
       )}
