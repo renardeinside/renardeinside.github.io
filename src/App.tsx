@@ -1,7 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "./components/theme-provider";
-import Index from "./pages/Index";
-import Valentine from "./pages/Valentine";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from './components/theme-provider';
+import Index from './pages/Index';
+import Valentine from './pages/Valentine';
 
 function App() {
   return (

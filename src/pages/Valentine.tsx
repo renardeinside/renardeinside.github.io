@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { format } from "date-fns";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+import { format } from 'date-fns';
 
 export default function Valentine() {
   const [noPosition, setNoPosition] = useState({ x: 0, y: 0 });
@@ -11,11 +11,11 @@ export default function Valentine() {
   const [isCorrectDate, setIsCorrectDate] = useState<boolean | null>(null);
   const correctDate = import.meta.env.VITE_FIRST_MEET_DATE; // Must be in YYYY-MM-DD format
   const incorrectDateMessages = [
-    "Oops! Try again. 😢",
-    "Not quite right. 😢",
-    "Close, but not quite. 😢",
-    "Oh no! Try again. 😢",
-    "Not the right date. 😢",
+    'Oops! Try again. 😢',
+    'Not quite right. 😢',
+    'Close, but not quite. 😢',
+    'Oh no! Try again. 😢',
+    'Not the right date. 😢',
   ];
 
   const moveNoButton = () => {
@@ -29,7 +29,7 @@ export default function Valentine() {
   };
 
   const handleDateConfirm = () => {
-    if (selectedDate && format(selectedDate, "yyyy-MM-dd") === correctDate) {
+    if (selectedDate && format(selectedDate, 'yyyy-MM-dd') === correctDate) {
       setIsCorrectDate(true);
     } else {
       setIsCorrectDate(false);
@@ -73,7 +73,7 @@ export default function Valentine() {
             </Button>
             <motion.div
               animate={{ x: noPosition.x, y: noPosition.y }}
-              transition={{ type: "spring", stiffness: 50 }}
+              transition={{ type: 'spring', stiffness: 50 }}
               className="inline-block"
             >
               <Button
